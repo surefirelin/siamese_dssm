@@ -21,7 +21,7 @@ tf.flags.DEFINE_string('model_name', 'siamese_model', 'model save directory')
 tf.flags.DEFINE_string('log_dir', 'log', 'log directory')
 tf.flags.DEFINE_string('input_file', 'corpus.txt', 'log directory')
 tf.flags.DEFINE_string('init_from', None, 'continue training from saved model at this path')
-tf.flags.DEFINE_string('epoches', 1000, 'continue training from saved model at this path')
+tf.flags.DEFINE_integer('epoches', 1000, 'continue training from saved model at this path')
 FLAGS = tf.app.flags.FLAGS
 
 best_loss = 9999
@@ -104,4 +104,3 @@ def main(_):
 
 if __name__=='__main__':
     tf.app.run()
-
